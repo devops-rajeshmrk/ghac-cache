@@ -38,6 +38,8 @@ jobs:
       with:
         path: models/
         key: models-${{ hashFiles('scripts/download-models.py') }}
+        restore-keys: |
+         models-
 
     - name: Download models
       run: python scripts/download-models.py
